@@ -1,0 +1,12 @@
+inicio aplicacion
+solicito un numero
+si el numero ingresado es multiplo de 3 y de 5 a la vez entonces
+    muestro un mensaje con "el numero ingresado es multiplo de 3 y de 5 a la vez"
+    finalizo aplicacion
+sino, si el numero ingresado es multiplo de 3 entonces
+    muestro un mensaje con "el numero ingresado es multiplo de 3"
+    finalizo aplicacion
+sino, si el numero ingresado es multiplo de 5 entonces
+    muestro un mensaje con "el numero ingresado es multiplo de 5"
+    finalizo aplicacion
+finalizo aplicacion

@@ -1,0 +1,16 @@
+METODOS DE ARRAYS
+
+lenght
+concat --> concatena arrays sin importar su tipo
+every --> devuelve un bool, se le pasa una funcion
+any
+find --> devuelve el primer elemento del arreglo que cumpla la funcion
+filter --> nos devuelve array nuevo con la info que cumpla la funcion del parametro
+map --> recibe funcion, x cada elemento de la funcion, la ejecuta y devuelve arreglo nuevo habiendo recibido la trasnformacion
+flat --> aplana en un arreglo varios arreglos
+pop --> saca el ultimo elemento
+shift --> saca el primer elemento
+sort --> ordena el array sort((a,b)=> b-a) lo ordena descendente
+push --> agrega elemento
+unshift --> agrega uno o mas elementos al frente de un array
+

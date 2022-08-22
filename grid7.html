@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-7</title>
+
+    <style>
+        *{
+            margin: 0;
+            color: white;
+        }
+
+        html, body{
+            height: 100%;
+        }
+
+        body{
+            display: grid;
+            width: 100vw;
+            height: 100vh;
+            grid-template-areas: "header"
+                                "div"
+                                "footer";
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 5fr 1fr;
+            gap: 5px;
+            max-width: 100vw;
+            max-height: 100vh;
+        }
+
+        header{
+            grid-area: header;
+            background-color: slategray;
+            display: flex;
+            align-items: center;
+        }
+
+        footer{
+            grid-area: footer;
+            background-color: blue;
+            display: flex;
+            align-items: center;
+        }
+
+        #principal{
+            grid-area: div;
+            background-color: aquamarine;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        main{
+            grid-column: 2 / span 2;
+            grid-row:1;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        aside{
+            grid-column: 4;
+            background-color: violet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #left{
+            grid-column: 2;
+            background-color: orangered;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #right{
+            grid-column: 3;
+            background-color: orangered;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #top{
+            display: grid;
+            height: 100%;
+            width: 100%;
+            grid-template-columns: repeat(5, 20%);
+            gap: 5px;
+        }
+
+        #bottom{
+            display: grid;
+            grid-template-columns: 20% 30% 30% 20%;
+            height: 100%;
+            width: 100%;
+            gap: 5px;
+        }
+
+        @media (max-width:720px){
+            #top{
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+                gap: 5px;
+            }
+            
+            #bottom{
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+                gap: 5px;
+            }
+
+            .mediaQ{
+                height: 50%;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>HEADER</header>
+    <div id="principal">
+        <div id="top">
+            <main class="mediaQ">MAIN CONTENT</main>
+            <aside class="mediaQ">SIDEBAR</aside>
+        </div>
+        <div id="bottom">
+            <section id="left" class="mediaQ">TWIN</section>
+            <section id="right" class="mediaQ">TWIN</section>
+        </div>
+    </div>
+    <footer>FOOTER</footer>
+
+</body>
+</html>

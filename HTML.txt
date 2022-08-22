@@ -1,0 +1,41 @@
+21/7
+
+Etiqueta DIV
+
+Siempre toma el ancho 100% posible, si queremos que tome el tamaño del contenido, usamos la etiqueta SPAN
+
+ORDERER LIST OL
+
+Al colocar LI en varias cantidades se enumeran en orden....1 2 3 y los podemos cambiar a numeros romanos u otros estilos
+
+UNORDERER LIST UL
+
+Al colocar LI en varias cantdiades, muestran solo puntitos o se pueden modificar por rombos u otras cosas....
+
+COMENTARIOS
+
+<!-- y termina con -->
+
+
+DOM
+
+Document Object Model
+API para HTML y XML
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Cuando referimos con un ID para darle estilo tenemos que llamarlo con el #
+Para la CLASS lo llamamos con el .
+
+
+Si definimos H1, CLASS y ID en CSS va a prevalecer el valor del más especifico, en este caso el ID
+Si definimos el style mismo en la etiqueta es el q va a prevalecer, pero no se recomienda
+
+margin: arriba, derecha, abajo, izq;
+
+VIDEO SOBRE GRID Y FLEX
+https://www.youtube.com/watch?v=6qko7Nbe8YA&list=PL748fFTh1rqAhIPE9vkY9OtaDDtFYCV6Z
+
+https://webdesign.tutsplus.com/es/articles/flexbox-vs-css-grid-which-should-you-use--cms-30184
+
+---------------------------------------------

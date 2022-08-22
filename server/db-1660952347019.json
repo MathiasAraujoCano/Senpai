@@ -1,0 +1,24 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "description": "zapatos"
+    },
+    {
+      "description": "ase",
+      "id": 2
+    },
+    {
+      "description": "asdf",
+      "id": 3
+    },
+    {
+      "description": "sdf",
+      "id": 4
+    },
+    {
+      "description": "sdfdf",
+      "id": 5
+    }
+  ]
+}

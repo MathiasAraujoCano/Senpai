@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries 2</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+
+            height: 100vh;
+            width: 100vw;
+            gap: 20px;
+        }
+
+        header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin-left: 10%;
+            gap: 10px;
+        }
+
+        #cabecera {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .arriba{
+            background-color: purple;
+            color: wheat;
+            padding: 5%;
+            width: 100%;
+        }
+
+        #imagen {
+            background-color: purple;
+            color: wheat;
+            font-size: 50;
+            padding: 5%;
+        }
+
+        main {
+            background-color: aquamarine;
+            width: 80%;
+            height: 100%;
+            margin-left: 10%;
+            margin-top: 20px;
+        }
+
+        section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center, flex-start;
+            width: 80%;
+            margin-left: 10%;
+            gap: 5px;
+
+        }
+
+        .abajo {
+            background-color: olivedrab;
+            padding: 10%;
+            width: 100%;
+        }
+
+        @media (min-width:600px) and (max-width:899px){
+            header{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                max-width: 60%;
+                margin-left: 20%;
+                align-items: initial;
+            }
+
+            .arriba, #imagen {
+                padding: 5%;
+            }
+
+            section {
+                justify-content: space-between;
+                align-items: flex-start;
+                max-width: 60%;
+                margin-left: 20%;
+            }
+
+            #section3 {
+                display: none;
+            }
+
+            main {
+                max-width: 60%;
+                margin-left: 20%;
+            }
+
+            .arriba {
+                width: 100%;
+            }
+        }
+
+        @media (max-width:599px){
+            header{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            #cabecera {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .arriba {
+                width: 25%;
+            }
+
+            main, section {
+                max-width: 60%;
+                margin-left: 20%;
+            }
+
+            #section2, #section3 {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="imagen">
+            LOGO
+        </div>
+        <div id="cabecera">
+            <div class="arriba">Opción 1</div>
+            <div class="arriba">Opción 2</div>
+            <div class="arriba">Opción 3</div>
+            <div class="arriba">Opción 4</div>
+        </div>
+    </header>
+    <main>
+        MAIN
+    </main>
+    <section>
+        <div class="abajo">Section I</div>
+        <div class="abajo" id="section2">Section II</div>
+        <div class="abajo" id="section3">Section III</div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-4</title>
+
+    <style>
+        *{
+            margin: 0;
+        }
+
+        body{
+            display: grid;
+            width: 100vw;
+            height: 100vh;
+            grid-template-areas: "header header"
+                                "nav article"
+                                "nav ads"
+                                "footer footer";
+            grid-template-rows: 1fr 7fr 1fr 1fr;
+            grid-template-columns: 3fr 7fr;
+            gap: 5px;
+        }
+
+        header, nav, article, section, footer{
+            background-color: green;
+        }
+
+        header{
+            grid-area: header;
+        }
+
+        nav{
+            grid-area: nav;
+        }
+
+        article{
+            grid-area: article;
+        }
+
+        section{
+            grid-area: ads;
+        }
+
+        footer{
+            grid-area: footer;
+        }
+
+        @media (max-width:450px){
+            body{
+                display: grid;
+                width: 100vw;
+                height: 100vh;
+                grid-template-areas: "header"
+                                    "article"
+                                    "footer";
+                grid-template-rows: 1fr 8fr 1fr;
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+
+            section, nav{
+                display: none;
+            }
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>HEADER</header>
+    <nav>NAV</nav>
+    <article>ARTICLE</article>
+    <section>ADS</section>
+    <footer>FOOTER</footer>
+</body>
+</html>

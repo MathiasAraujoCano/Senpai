@@ -1,0 +1,11 @@
+inicio aplicacion
+solicito una opcion
+si la opcion ingresada es la opcion a entonces
+    muestro un mensaje con "la opcion ingresada es la opcion a"
+sino, si la opcion ingresada es la opcion b entonces
+    muestro un mensaje con "la opcion ingresada es la opcion b"
+sino, si la opcion ingresada es la opcion c entonces
+    muestro un mensaje con "la opcion ingresada es la opcion c"
+sino si la opcion ingresada es la opcion d entonces
+    finalizo aplicacion
+vuelvo a linea de solicitar una opcion

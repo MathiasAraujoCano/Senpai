@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container {
+            background: red;
+            display: block;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div id="container">
+        <p id="place"></p>
+    </div>
+    <button id="button">CLICK HERE</button>
+
+    <script>
+        const contenedor = document.getElementById("container");
+        contenedor.style.background = "blue";
+        contenedor.style.height = "200px";
+        contenedor.style.width = "200px";
+
+        document.getElementById("button").addEventListener("click", myFunction)
+
+        function myFunction() {
+            document.getElementById("place").innerHTML = "You clicked the button XD"
+            document.getElementById("button").style.background = "yellow"
+        }
+    </script>
+</body>
+</html>
