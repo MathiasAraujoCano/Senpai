@@ -78,10 +78,39 @@
            
             function checkWinner(){
                 if (jugadas[0] == jugadas[1] && jugadas[1] == jugadas[2]){
-                    document.getElementById("nextTurn").textContent = "Ganador " + jugadas[0]
+                    if (jugadas[0] != null && jugadas[1] != null && jugadas[2] != null){
+                    document.getElementById("nextTurn").textContent = "Ganador " + jugadas[0]}
+                }
+                if (jugadas[3] == jugadas[4] && jugadas[4] == jugadas[5]){
+                    if (jugadas[3] != null && jugadas[4] != null && jugadas[5] != null){
+                    document.getElementById("nextTurn").textContent = "Ganador " + jugadas[3]}
+                }
+                if (jugadas[6] == jugadas[7] && jugadas[7] == jugadas[8]){
+                    if (jugadas[6] != null && jugadas[7] != null && jugadas[8] != null){
+                    document.getElementById("nextTurn").textContent = "Ganador " + jugadas[6]}
+                }
+                if (jugadas[0] == jugadas[3] && jugadas[3] == jugadas[6]){
+                    if (jugadas[0] != null && jugadas[3] != null && jugadas[6] != null){
+                    document.getElementById("nextTurn").textContent = "Ganador " + jugadas[0]}
+                }
+                if (jugadas[1] == jugadas[4] && jugadas[4] == jugadas[7]){
+                    if (jugadas[1] != null && jugadas[4] != null && jugadas[7] != null){
+                    document.getElementById("nextTurn").textContent = "Ganador " + jugadas[1]}
+                }
+                if (jugadas[2] == jugadas[5] && jugadas[5] == jugadas[8]){
+                    if (jugadas[2] != null && jugadas[5] != null && jugadas[8] != null){
+                    document.getElementById("nextTurn").textContent = "Ganador " + jugadas[2]}
+                }
+                if (jugadas[0] == jugadas[4] && jugadas[4] == jugadas[8]){
+                    if (jugadas[0] != null && jugadas[4] != null && jugadas[8] != null){
+                    document.getElementById("nextTurn").textContent = "Ganador " + jugadas[0]}
+                }
+                if (jugadas[2] == jugadas[4] && jugadas[4] == jugadas[6]){
+                    if (jugadas[2] != null && jugadas[4] != null && jugadas[6] != null){
+                    document.getElementById("nextTurn").textContent = "Ganador " + jugadas[2]}
                 }
                 else{
-                    
+                    alert ("EMPATE")
                 }
             }
 
