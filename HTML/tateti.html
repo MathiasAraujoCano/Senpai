@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tablero {
+            background-color: black;
+            display: grid;
+            grid-template-areas: 
+            "1 2 3"
+            "4 5 6"
+            "7 8 9";
+            gap: 10px;
+        }
+
+        div {
+            background-color: aliceblue;
+            font-size: 30px;
+        }
+
+        html, body,#tablero {
+            height: 100%;
+            background-color: black;
+        }
+
+        #nextTurn {
+            border: 1px green;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <div id="nextTurn">Empieza el jugador X</div>
+    <button id="resetBoard" onclick="resetBoard()">RESET</button>
+    <div id="tablero">
+
+    </div>
+
+    <script>
+        var turno = "X"
+        var jugadas = []
+        for (let i = 0; i < 9; i++){
+            const div = document.createElement("div")
+            div.setAttribute("id",i)
+            document.getElementById("tablero").appendChild(div)
+            div.addEventListener("click", function(e){
+                let id = e.target.id
+                asignarJugada(id)
+            })
+        }
+
+        function asignarJugada(id){
+                let posicion = document.getElementById(id)
+                if (posicion.textContent != ""){
+                    alert ("Ya está marcado")
+                    return
+                }
+                posicion.textContent = turno
+                jugadas[id] = turno
+                cambiarTurno()
+                checkWinner()                
+            }
+
+            function cambiarTurno(){
+                if (turno === "X"){
+                    turno = "O"
+                }
+                else{
+                    turno = "X"
+                }
+                document.getElementById("nextTurn").textContent = "Siguiente turno es " + turno
+            }
+
+           
+            function checkWinner(){
+                if (jugadas[0] == jugadas[1] && jugadas[1] == jugadas[2]){
+                    document.getElementById("nextTurn").textContent = "Ganador " + jugadas[0]
+                }
+                else{
+                    
+                }
+            }
+
+
+            function resetBoard(){
+                for (let i = 0; i < 9; i++){
+                    document.getElementById(i).textContent = ""   
+                    jugadas[i] = null
+                    turno = "X"
+                    document.getElementById("nextTurn").textContent = "Turno de " + turno
+                }
+            }
+
+    </script>
+</body>
+</html>

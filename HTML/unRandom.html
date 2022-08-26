@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="randomm()">ALEATORIO</button>
+    
+    <script>
+        function randomm(){
+            let num;
+            num = Math.random()*3;
+            num = parseInt(num);
+            if (num == 0){
+                window.location = 'https://outlook.live.com/owa/';
+            }
+            else if (num == 1){
+                window.location = 'https://www.google.com/';
+            }
+            else{
+                window.location = 'https://espanol.yahoo.com/?p=us';
+            }
+        }
+    </script>
+</body>
+</html>

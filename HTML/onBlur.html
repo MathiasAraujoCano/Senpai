@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name" placeholder="Ingrese su nombre">
+    <input type="password" id="pass" placeholder="Ingrese su contraseña">
+    
+
+    <script>
+        let passw = document.getElementById("pass");
+        passw.addEventListener("blur", whatss)
+
+        function whatss(){
+            const input = document.getElementById("pass").value.length
+            if (input < 7 || input > 20){
+                alert("La contraseña debe tener más de 7 caracteres y menos de 20")
+            }
+        }
+        
+        // si le pasamos tipo password necesitamos llamar .value si le pasamos text llamamos .textcontent
+
+    </script>
+</body>
+</html>
